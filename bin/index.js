@@ -31,14 +31,14 @@ program
             { name: '🏗️ Empty Project (Basic Setup)', value: 'empty' },
             { name: '📝 Todo Application', value: 'todo' },
             { name: '📊 Admin Dashboard', value: 'dashboard' },
-            { name: '🛍️ E-commerce Store', value: 'ecommerce' }
-          ]
+            { name: '🛍️ E-commerce Store', value: 'ecommerce' },
+          ],
         },
         {
           type: 'list',
           name: 'language',
           message: 'Choose your preferred language:',
-          choices: ['JavaScript', 'TypeScript']
+          choices: ['JavaScript', 'TypeScript'],
         },
         {
           type: 'list',
@@ -47,15 +47,15 @@ program
           choices: [
             'Tailwind CSS',
             'Material UI',
-            'Chakra UI'
-          ]
+            'Chakra UI',
+          ],
         },
         {
           type: 'list',
           name: 'packageManager',
           message: 'Choose a package manager:',
-          choices: ['npm', 'yarn', 'pnpm']
-        }
+          choices: ['npm', 'yarn', 'pnpm'],
+        },
       ]);
 
       console.log('\n🚀 Creating your React project with the following configuration:');
@@ -71,7 +71,7 @@ program
       await createProject(projectName, {
         ...answers,
         git: true,
-        installDeps: true
+        installDeps: true,
       });
       
       spinner.succeed(chalk.green('Project created successfully! 🎉'));
