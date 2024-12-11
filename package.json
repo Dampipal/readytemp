@@ -1,0 +1,72 @@
+{
+  "name": "readytemp",
+  "version": "1.0.0",
+  "description": "A CLI tool to quickly create React.js projects with custom templates",
+  "main": "bin/index.js",
+  "bin": {
+    "readytemp": "./bin/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "release:major": "npm version major && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm test && npm run lint",
+    "version": "npm run format && git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "react",
+    "cli",
+    "template",
+    "create-react-app",
+    "boilerplate",
+    "generator",
+    "scaffold"
+  ],
+  "author": "Dampi Pal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dampipal/readytemp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dampipal/readytemp/issues"
+  },
+  "homepage": "https://github.com/dampipal/readytemp#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
