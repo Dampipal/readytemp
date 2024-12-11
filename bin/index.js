@@ -28,10 +28,10 @@ program
           name: 'template',
           message: 'Choose a project template:',
           choices: [
-            { name: '🏗️ Empty Project (Basic Setup)', value: 'empty' },
-            { name: '📝 Todo Application', value: 'todo' },
-            { name: '📊 Admin Dashboard', value: 'dashboard' },
-            { name: '🛍️ E-commerce Store', value: 'ecommerce' },
+            { name: '🏗️ Empty Project (Basic Setup)', value: 'empty', },
+            { name: '📝 Todo Application', value: 'todo', },
+            { name: '📊 Admin Dashboard', value: 'dashboard', },
+            { name: '🛍️ E-commerce Store', value: 'ecommerce', },
           ],
         },
         {
